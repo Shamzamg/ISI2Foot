@@ -1,0 +1,155 @@
+html,
+header,
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h2,
+p {
+    margin: 30px 0 0;
+    padding: 0;
+}
+
+p {
+    color: #012329;
+}
+
+a{
+    all: unset;
+}
+
+.slider {
+    width: 100%;
+    margin: 15px auto;
+    background: #ececec;
+    border-radius: 5px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    /*h v b s*/
+}
+
+
+.slick-track{
+    padding-top: 30px;
+}
+
+.slider img{
+    width: 100px;
+}
+
+.slick-slider button {
+    display: none!important;
+}
+
+.slick-slide {
+    color: #333;
+    padding: 40px 0;
+    font-size: 1.25em;
+    font-family: "Verdana";
+    text-align: center;
+    pointer-events: none;
+}
+
+.slick-slide .desc {
+    opacity: 0;
+}
+
+.slick-slide .desc > * {
+    transition: all 900ms ease;
+}
+
+.slick-slide .desc h2 {
+    position: relative;
+    left: 50px;
+    line-height: 1;
+}
+
+.slick-slide .desc p {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-dots {
+    text-align: center;
+    transform: translateX(-12px);
+}
+
+.slick-dots li {
+    display: inline-block;
+    padding: 1px;
+    background: #ccc;
+    margin: 10px 5px;
+    width: 40px;
+    height: 5px;
+}
+
+.slick-dots li.slick-active {
+    background: #012329;
+}
+
+.slick-dots button {
+    display: none;
+}
+
+.slick-slide:nth-child(odd) {
+    /* background: blue;*/
+}
+
+.slick-slide {
+    opacity: 0.2;
+    transition: all 300ms ease;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.slick-current {
+    opacity: 1;
+    transform: scale(1.1);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.slick-current .desc {
+    opacity: 1;
+}
+
+.slick-current .desc h2 {
+    left: 0;
+}
+
+.slick-current .desc p {
+    top: 0;
+    opacity: 1;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 4px solid #012329;
+    text-decoration: none;
+    color: #012329;
+    font-size: .6em;
+    text-transform: uppercase;
+    display: block;
+    margin: 30px auto 0;
+    max-width: 100px;
+    width: 100%;
+    font-weight: bold;
+    pointer-events: initial;
+}
+
+.joueur-div{
+    margin-bottom: 100px;
+}

@@ -2,12 +2,8 @@
 
 @section('titrePage', 'Liste des Joueurs')
 
-@section('titreItem')
-    <h1>Tous les joueurs: </h1>
-@endsection
 
 @section('contenu')
-
     @if(session()->has('info'))
         <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
             <div class="card-body">
@@ -15,33 +11,14 @@
             </div>
         </div>
     @endif
-
-    <div class="card">
-        <header class="card-header">
-            <h5 class="card-header-title">Nous avons sélectionné pour vous: </h5>
-        </header>
-        <div class="card-content">
-            <div class="content">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <th>#</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Equipe</th>
-                        <th></th>
-                        <th></th>
-                    </thead>
-                    @foreach($joueurs as $joueur)
-                        <tr>
-                            <td> {{ $joueur->id }} </td>
-                            <td> {{ $joueur->nom }} </td>
-                            <td> {{ $joueur->prenom }} </td>
-                            <td> {{ $joueur->equipe->nom_equipe }} </td>
-                            <td> <a class="btn btn-primary" href="{{ route('joueurs.show', $joueur->id) }}">Voir</a> </td>
-                        </tr>
-                    @endforeach
-                </table>
+    <section class="slider">
+        @foreach($joueurs as $joueur)
+            <div>
+                <img src="{{ asset('images/'.$joueur->photo) }}" />
+                <div class="desc">
+                    <a href="{{ route('joueurs.show', $joueur->id) }}" class="btn">Voir</a>
+                </div>
             </div>
-        </div>
-    </div>
+        @endforeach
+    </section>
 @endsection

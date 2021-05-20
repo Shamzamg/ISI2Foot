@@ -5,7 +5,7 @@
 @endsection
 
 @section('contenu')
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center joueur-div" style="margin-top: 100px;"> 
         <img src="{{asset($path)}}" style="max-width: 14%; margin-right: 10px; margin-bottom: 20%;">
         <div>
             <h5 class="card-title">Nom : {{ $joueur->nom }}</h5>
