@@ -55,7 +55,7 @@ class EquipeController extends Controller
         $joueurs =  DB::table('joueurs')
                     ->where('equipe_id', '=', $equipe->id) 
                     ->get();
-        echo $joueurs;
+
         return view('equipe', compact('equipe', 'joueurs'));
     }
 
