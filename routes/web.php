@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JoueurController;
+use App\Http\Controllers\EquipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/', function () {
 Route::resource('/', JoueurController::class);
 
 Route::resource('joueurs', JoueurController::class);
+
+Route::resource('equipes', EquipeController::class);

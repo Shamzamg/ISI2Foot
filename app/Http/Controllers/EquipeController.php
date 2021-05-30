@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Models\Equipe;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class EquipeController extends Controller
      */
     public function index()
     {
-        //
+        $equipes = Equipe::all();
+        return view('equipes',compact('equipes'));
     }
 
     /**
@@ -44,9 +46,17 @@ class EquipeController extends Controller
      * @param  \App\Models\Equipe  $equipe
      * @return \Illuminate\Http\Response
      */
-    public function show(Equipe $equipe)
+    public function show($nom_equipe)
     {
-        //
+        $equipe = DB::table('equipes')
+                ->where('nom_equipe', '=', $nom_equipe) 
+                ->first();
+
+        $joueurs =  DB::table('joueurs')
+                    ->where('equipe_id', '=', $equipe->id) 
+                    ->get();
+        echo $joueurs;
+        return view('equipe', compact('equipe', 'joueurs'));
     }
 
     /**

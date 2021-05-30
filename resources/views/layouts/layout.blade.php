@@ -25,7 +25,7 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/">Equipes</a>
+                    <a class="nav-link" href="/equipes">Equipes</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="/">Rencontres</a>
@@ -47,8 +47,10 @@
     </head>
     <body>
         @yield('contenu')
-        <footer class="d-flex justify-content-center footer" style="bottom: -500;">
-            ISI2Foot - Copyright 3A Info - 2021
+        <footer class="d-flex justify-content-between footer">
+            <img src="{{ asset('images/logos/france-flag.png') }}" alt="france-flag" style="width: 30px; height: 30px; margin-left: 5px;"/>
+            <p style="all:unset;"><b>ISI2Foot - Copyright 3A Info - 2021</b></p>
+            <p style="all:unset; margin-right: 5px;">Made in Lyon</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     </body>

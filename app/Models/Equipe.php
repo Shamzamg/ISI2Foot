@@ -13,4 +13,9 @@ class Equipe extends Model
     public function joueurs(){
         return $this->hasMany(Joueur::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'nom_equipe';
+    }
 }

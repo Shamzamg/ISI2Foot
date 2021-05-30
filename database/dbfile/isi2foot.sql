@@ -16,4 +16,5 @@ INSERT INTO `joueurs` (`id`, `equipe_id`, `nom`,`prenom`, `age`, `numero`, `phot
 (3, 3, 'Cherki', 'Rayan', '16', '18', 'cherki.png'),
 (4, 4, 'Mbappe', 'Killian', '22', '7', 'mbappe.png'),
 (5, 5, 'Suárez', 'Luis', '34', '9', 'suarez.png'),
-(6, 6, 'Thauvin', 'Florian', '28', '26', 'thauvin.png');
+(6, 6, 'Thauvin', 'Florian', '28', '26', 'thauvin.png'),
+(7, 3, 'Slimani', 'Islam', '32', '20', 'slimani.png');
