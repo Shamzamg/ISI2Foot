@@ -18,3 +18,22 @@ INSERT INTO `joueurs` (`id`, `equipe_id`, `nom`,`prenom`, `age`, `numero`, `phot
 (5, 5, 'Suárez', 'Luis', '34', '9', 'suarez.png'),
 (6, 6, 'Thauvin', 'Florian', '28', '26', 'thauvin.png'),
 (7, 3, 'Slimani', 'Islam', '32', '20', 'slimani.png');
+
+INSERT INTO `pays` (`id`, `nom`, `logo`) VALUES
+(1, 'France', 'france.png'),
+(2, 'Espagne', 'espagne.jpg'),
+(3, 'Angleterre', 'angleterre.jpg'),
+(4, 'Allemagne', 'allemagne.jpg'),
+(5, 'Italie', 'italie.png'),
+(6, 'Europe', 'europe.jpg');
+
+INSERT INTO `championnats` (`id`, `nom`, `annee_debut`, `annee_fin`, `logo`, `pays_id`) VALUES
+(1, 'Ligue 1', 2020, 2021, 'ligue1.png', 1),
+(2, 'Champions League', 2020, 2021, 'champions_league.png', 6),
+(3, 'Europa League', 2020, 2021, 'europa_league.png', 6);
+
+INSERT INTO `rencontres` (`id`, `score`, `equipe_id1`, `equipe_id2`, `date`, `heure`, `championnat_id`) VALUES
+(1, '1-0', 3, 6, '2021-05-29', '21:00:00', 1),
+(2, '2-1', 3, 4, '2021-05-28', '19:30:00', 1),
+(3, '', 1, 5, '2021-06-09', '21:00:00', 3),
+(4, '', 6, 2, '2021-06-11', '20:50:00', 2);

@@ -39,6 +39,7 @@ class RencontreController extends Controller
             $temp->equipe1 = $equipe1;
             $temp->equipe2 = $equipe2;
             $temp->date = $rencontre->date;
+            $temp->heure = $rencontre->heure;
 
             array_push($rencontres, $temp);
         }

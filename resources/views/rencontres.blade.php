@@ -24,7 +24,7 @@
             </div>
 
             <div class="col-sm-4 col-xs-4 rencontre-score-date">
-                <p class="rencontre-date">le {{ $rencontre->date }}</p><br/>
+                <p class="rencontre-date">le {{ $rencontre->date }} <br/> à {{ $rencontre->heure }}</p><br/>
 
                 <p class="rencontre-score">{{ $rencontre->score }}</p>
             </div>

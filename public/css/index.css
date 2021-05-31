@@ -23,6 +23,7 @@ a{
 .slider {
     width: 100%;
     margin: 15px auto;
+    margin-bottom: 0px;
     background: #ececec;
     border-radius: 5px;
     padding-top: 40px;
@@ -156,7 +157,9 @@ a{
 }
 
 .footer{
-    margin-top: 5px;
+    padding-top: 5px;
+    background-color:rgba(0, 0, 0, 0.86);
+    color: white;
 }
 
 .text-center{
