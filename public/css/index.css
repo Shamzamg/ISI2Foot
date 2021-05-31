@@ -152,18 +152,10 @@ a{
     pointer-events: initial;
 }
 
-.joueur-div{
-    margin-bottom: 100px;
-}
-
 .footer{
     padding-top: 5px;
     background-color:rgba(0, 0, 0, 0.86);
     color: white;
-}
-
-.text-center{
-    text-align: center;
 }
 
 .container{

@@ -1,4 +1,4 @@
-.equipe-btn{
+.championnat-btn{
     position: absolute;
     bottom: 5px;
     left: 60px;
@@ -17,11 +17,11 @@
     pointer-events: initial;
 }
 
-.equipe-container,.equipe-view-container>.row{
+.championnat-container,.championnat-view-container>.row{
     padding-left: 100px;
 }
 
-.row>.equipe-card{
+.row>.championnat-card{
     border-radius: 15px;
     margin-top: 100px;
     margin-right: 5px;
@@ -33,52 +33,15 @@
     height: 230px;
 }
 
-.equipe-img{
+.championnat-img{
     width: 100px; 
     height: 100px; 
     margin-left: 35px;
+    margin-bottom: 30px;
     padding-top: 5px;
 }
 
-.equipe-view-row{
-    margin-left: unset;
-    margin-top: 100px;
-    justify-content: center;
-    text-align: center;
-}
-
-.equipe-view-container{
-    overflow: hidden;
-    background: rgb(252,250,250);
-    background: radial-gradient(circle, rgba(252,250,250,1) 19%, rgba(195,220,244,1) 100%);
-}
-
-.equipe-view-mainImg{
-    width: 200px; 
-    height: 200px; 
-    padding-top: 5px;
-}
-
-.equipe-view-img{
-    width: 120px; 
-    height: 200px; 
-    margin-left: 30px;
-    padding-top: 5px;
-}
-
-.equipe-view-card{
-    border-radius: 15px;
-    margin-top: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    width: 200px;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 39%, rgba(185,200,215,1) 100%);
-    height: 330px;
-}
-
-.equipe-container{
+.championnat-container{
     background-image: url('../images/backgrounds/football-field.jpeg');
     /* Full height */
     height: 100vh;
@@ -88,4 +51,42 @@
     background-size: cover;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.championnat-view-row{
+    margin-left: unset;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.championnat-view-container{
+    overflow: hidden;
+    background: rgb(252,250,250);
+    background: radial-gradient(circle, rgba(252,250,250,1) 19%, rgba(195,220,244,1) 100%);
+}
+
+.championnat-view-mainImg{
+    width: 200px; 
+    height: 200px; 
+    padding-top: 5px;
+}
+
+.championnat-view-img{
+    width: 120px; 
+    height: 120px; 
+    margin-left: 30px;
+    padding-top: 5px;
+}
+
+.championnat-view-card{
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 39%, rgba(185,200,215,1) 100%);
+    height: 250px;
 }

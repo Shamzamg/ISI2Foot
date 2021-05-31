@@ -1,18 +1,28 @@
 @extends('layouts.layout')
 
+@section('stylesheet')
+    <link rel="stylesheet" href="{{ asset('css/joueur.css') }}" type="text/css">
+@endsection
+
 @section('titrePage')
     Information sur le Joueur
 @endsection
 
 @section('contenu')
-    <div class="d-flex justify-content-center joueur-div" style="margin-top: 100px;"> 
-        <img src="{{asset($path)}}" style="max-width: 14%; margin-right: 10px; margin-bottom: 20%;">
-        <div>
-            <h5 class="card-title">Nom : {{ $joueur->nom }}</h5>
-            <p class="card-text">Prénom : {{ $joueur->prenom }}</p>
-            <p class="card-text">Age : {{ $joueur->age }}</p>
-            <p class="card-text">Numéro : {{ $joueur->numero }}</p>
-            <p class="card-text">Equipe : {{ $equipe->nom_equipe }}</p>
+    <div class="d-flex justify-content-center joueur-div"> 
+        <img class="joueur-img" src="{{asset($path)}}">
+        <div class="joueur-data-container">
+            <p class="joueur-nom">{{ $joueur->nom }}</p>
+            <p class="joueur-prenom">{{ $joueur->prenom }}</p>
+            <div class="container">
+                <div class="row">
+                    <div class="joueur-numero col-lg-4 col-sm-4">{{ $joueur->numero }}</div>
+                    <div class="col-lg-2 col-sm-2"></div>
+                    <div class="col-lg-6 col-sm-6">
+                        <img class="joueur-equipe-img" src="{{asset('images/equipes/'.$equipe->logo_equipe)}}">
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
 @endsection

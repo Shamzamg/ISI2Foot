@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\RencontreController;
+use App\Http\Controllers\ChampionnatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::resource('joueurs', JoueurController::class);
 Route::resource('equipes', EquipeController::class);
 
 Route::resource('rencontres', RencontreController::class);
+
+Route::resource('championnats', ChampionnatController::class);

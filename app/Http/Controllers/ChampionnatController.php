@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Championnat;
 use Illuminate\Http\Request;
+use DB;
 
 class ChampionnatController extends Controller
 {
@@ -14,7 +15,8 @@ class ChampionnatController extends Controller
      */
     public function index()
     {
-        //
+        $championnats = Championnat::all();
+        return view('championnats',compact('championnats'));
     }
 
     /**
@@ -44,9 +46,21 @@ class ChampionnatController extends Controller
      * @param  \App\Models\Championnat  $championnat
      * @return \Illuminate\Http\Response
      */
-    public function show(Championnat $championnat)
+    public function show($nom_championnat)
     {
-        //
+        $championnat = DB::table('championnats')
+                ->where('nom', '=', $nom_championnat) 
+                ->first();
+
+        $equipes =  DB::select('SELECT DISTINCT e.* FROM championnats
+                                JOIN rencontres r on r.championnat_id = ?
+                                JOIN equipes e on r.equipe_id1 = e.id
+                                UNION
+                                SELECT DISTINCT e.* FROM championnats
+                                JOIN rencontres r on r.championnat_id = ?
+                                JOIN equipes e on r.equipe_id2 = e.id', [$championnat->id, $championnat->id]);
+
+        return view('championnat', compact('championnat', 'equipes'));
     }
 
     /**
