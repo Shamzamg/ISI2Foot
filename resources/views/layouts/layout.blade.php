@@ -36,7 +36,6 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="/championnats">Les championnats</a></li>
-                        <li><a class="dropdown-item" href="/rencontres">Les rencontres</a></li>
                         <li><a class="dropdown-item" href="/joueurs">Les joueurs</a></li>
                     </ul>
                     </li>

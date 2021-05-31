@@ -5,6 +5,7 @@ body{
     margin: 0;
 }
 
+
 h2,
 p {
     margin: 30px 0 0;
@@ -177,8 +178,8 @@ a{
     margin-top: 5px;
 }
 
-.row{
-    margin-left: 100px;
+.equipe-container,.equipe-view-container>.row{
+    padding-left: 100px;
 }
 
 .row>.equipe-card{
@@ -200,6 +201,13 @@ a{
     padding-top: 5px;
 }
 
+.rencontre-img{
+    width: 100px; 
+    height: 100px; 
+    margin-left: 35px;
+    padding-top: 5px;
+}
+
 .text-center{
     text-align: center;
 }
@@ -211,6 +219,7 @@ a{
     margin-left: 5px;
     margin-bottom: 10px;
     width: 200px;
+    min-width: 200px;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 39%, rgba(185,200,215,1) 100%);
     height: 230px;
@@ -223,13 +232,15 @@ a{
 
 .equipe-view-row{
     margin-left: unset;
+    margin-top: 100px;
     justify-content: center;
     text-align: center;
 }
 
 .equipe-view-container{
-    margin-top: 100px;
     overflow: hidden;
+    background: rgb(252,250,250);
+    background: radial-gradient(circle, rgba(252,250,250,1) 19%, rgba(195,220,244,1) 100%);
 }
 
 .equipe-view-mainImg{
@@ -269,4 +280,164 @@ a{
     margin-bottom: 10px;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.rencontre-container{
+    height: 100vh;
+    margin-bottom: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.rencontre-container>.row{
+    background: rgb(252,250,250);
+    background: radial-gradient(circle, rgba(252,250,250,1) 19%, rgba(164,199,233,1) 100%);
+}
+
+.rencontre-btn{
+    position: absolute;
+    bottom: 5px;
+    left: 60px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 4px solid #012329;
+    text-decoration: none;
+    color: #012329;
+    font-size: .6em;
+    text-transform: uppercase;
+    display: block;
+    margin: 30px auto 0;
+    margin-bottom: 10px;
+    max-width: 100px;
+    font-weight: bold;
+    pointer-events: initial;
+}
+
+.rencontre-score{
+    all: unset;
+    font-weight: bold; 
+    font-size: 70px; 
+    bottom: 80px;
+}
+
+.rencontre-date{
+    all: unset; 
+    font-weight: bold; 
+    font-size: 30px;
+    bottom: 200px;
+}
+
+.rencontre-score-date{
+    text-align: center; 
+    margin-top: 150px;
+}
+
+@media (min-width: 580px) and (max-width: 670px) {
+    .row>.rencontre-card {
+        border-radius: 15px;
+        margin-top: 14%;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        width: 150px;
+        min-width: 150px;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 39%, rgba(185,200,215,1) 100%);
+        height: 200px;
+    }
+
+    .rencontre-img{
+        width: 70px; 
+        height: 70px; 
+        margin-left: 20px;
+        padding-top: 0.7%;
+    }
+
+    .rencontre-btn{
+        position: absolute;
+        bottom: 5px;
+        left: 30px;
+        border-radius: 30px;
+        padding: 10px 20px;
+        border: 4px solid #012329;
+        text-decoration: none;
+        color: #012329;
+        font-size: .6em;
+        text-transform: uppercase;
+        display: block;
+        margin: 30px auto 0;
+        margin-bottom: 10px;
+        max-width: 30px;
+        font-weight: bold;
+        pointer-events: initial;
+    }
+
+    .rencontre-score{
+        all: unset;
+        font-weight: bold; 
+        font-size: 40px; 
+        background: white; 
+        bottom: 80px;
+    }
+
+    .rencontre-date{
+        all: unset; 
+        font-weight: bold; 
+        font-size: 20px;
+        background: white; 
+        bottom: 200px;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .row>.rencontre-card {
+        border-radius: 15px;
+        margin-top: 25px;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        width: 100px;
+        min-width: 100px;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 39%, rgba(185,200,215,1) 100%);
+        height: 150px;
+    }
+
+    .rencontre-img{
+        width: 40px; 
+        height: 40px; 
+        margin-left: 20px;
+        padding-top: 0.7%;
+    }
+
+    .rencontre-btn{
+        all:unset;
+        /* Hide the text. */
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .rencontre-score-date{
+        margin-top: 60px;
+        max-width: 70px;
+    }
+
+    .rencontre-score{
+        all: unset;
+        font-weight: bold; 
+        font-size: 20px; 
+        background: white; 
+        bottom: 80px;
+    }
+
+    .rencontre-date{
+        all: unset; 
+        font-weight: bold; 
+        font-size: 10px;
+        background: white; 
+        bottom: 200px;
+    }
+
 }

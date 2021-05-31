@@ -31,7 +31,11 @@ class RencontreController extends Controller
             ->first();
 
             $temp->id = $rencontre->id;
-            $temp->score = $rencontre->score;
+            if($rencontre->score == ''){
+                $temp->score = 'VS';
+            } else {
+                $temp->score = $rencontre->score;
+            }
             $temp->equipe1 = $equipe1;
             $temp->equipe2 = $equipe2;
             $temp->date = $rencontre->date;
