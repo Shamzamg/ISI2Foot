@@ -48,7 +48,7 @@ class JoueurController extends Controller
     public function show(Joueur $joueur)
     {
         $equipe = $joueur->equipe;
-        $path = 'images/' .$joueur->photo;
+        $path = 'images/joueurs/' .$joueur->photo;
         return view('joueur', compact('joueur','equipe','path'));
     }
 
