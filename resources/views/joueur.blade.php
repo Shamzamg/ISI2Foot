@@ -19,7 +19,9 @@
                     <div class="joueur-numero col-lg-4 col-sm-4">{{ $joueur->numero }}</div>
                     <div class="col-lg-2 col-sm-2"></div>
                     <div class="col-lg-6 col-sm-6">
-                        <img class="joueur-equipe-img" src="{{asset('images/equipes/'.$equipe->logo_equipe)}}">
+                        <a href="{{ route('equipes.show', $equipe->nom_equipe) }}" class="joueur-equipe-view">
+                            <img class="joueur-equipe-img" src="{{asset('images/equipes/'.$equipe->logo_equipe)}}">
+                        </a>
                     </div>
                 </div>
             </div>  

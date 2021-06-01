@@ -19,7 +19,7 @@
             <img src="{{ asset('images/championnats/'.$championnat->logo ) }}" class="championnat-view-mainImg"/> 
             <h5 class="card-title">{{ $championnat->nom }}</h5>
         </div>  
-        <h5 style="margin-left: 100px; margin-top: 50px;">Tous les joueurs:</h5>
+        <h5 class="championnat-title">Toutes les équipes:</h5>
         <div class="row" style="margin-bottom: 40px;">
         @foreach($equipes as $equipe)
             <div class="card championnat-view-card">

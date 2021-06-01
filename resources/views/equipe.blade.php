@@ -24,9 +24,7 @@
         @foreach($joueurs as $joueur)
             <div class="card equipe-view-card">
                 <img src="{{ asset('images/joueurs/'.$joueur->photo) }}" class="equipe-view-img"/>
-                <h5 class="card-title text-center">{{ $joueur->prenom  }}</h5>
-                <h5 class="card-title text-center">{{ $joueur->nom }}</h5>
-                <a href="{{ route('joueurs.show', $joueur->id) }}" class="equipe-btn">Voir</a>
+                <a href="{{ route('joueurs.show', $joueur->id) }}" class="equipe-view-btn">Voir</a>
             </div>
         @endforeach
         </div>

@@ -53,6 +53,11 @@
     overflow-y: scroll;
 }
 
+.championnat-title{
+    margin-left: 100px; 
+    margin-top: 50px;
+}
+
 .championnat-view-row{
     margin-left: unset;
     margin-top: 100px;
