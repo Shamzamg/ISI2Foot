@@ -13,12 +13,14 @@ class CreateEquipesTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipes', function (Blueprint $table) {
-            $table->id();
-            $table->text('nom_equipe');
-            $table->text('logo_equipe');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('equipes')) {
+            Schema::create('equipes', function (Blueprint $table) {
+                $table->id();
+                $table->text('nom_equipe');
+                $table->text('logo_equipe');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

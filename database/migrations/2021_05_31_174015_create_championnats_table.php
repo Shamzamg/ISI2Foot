@@ -13,20 +13,22 @@ class CreateChampionnatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('championnats', function (Blueprint $table) {
-            $table->id();
-            $table->text('nom');
-            $table->unsignedBigInteger('annee_debut');
-            $table->unsignedBigInteger('annee_fin');
-            $table->text('logo');
-            $table->unsignedBigInteger('pays_id');
-            $table->foreign('pays_id')
-                ->references('id')
-                ->on('pays')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('championnats')) {
+            Schema::create('championnats', function (Blueprint $table) {
+                $table->id();
+                $table->text('nom');
+                $table->unsignedBigInteger('annee_debut');
+                $table->unsignedBigInteger('annee_fin');
+                $table->text('logo');
+                $table->unsignedBigInteger('pays_id');
+                $table->foreign('pays_id')
+                    ->references('id')
+                    ->on('pays')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -13,12 +13,14 @@ class CreatePaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('pays', function (Blueprint $table) {
-            $table->id();
-            $table->text('nom');
-            $table->text('logo');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('pays')) {
+            Schema::create('pays', function (Blueprint $table) {
+                $table->id();
+                $table->text('nom');
+                $table->text('logo');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

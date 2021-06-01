@@ -13,21 +13,23 @@ class CreateJoueursTable extends Migration
      */
     public function up()
     {
-        Schema::create('joueurs', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('equipe_id');
-            $table->foreign('equipe_id')
-                ->references('id')
-                ->on('equipes')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->text('nom');
-            $table->text('prenom');
-            $table->integer('age');
-            $table->integer('numero');
-            $table->text('photo');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('joueurs')) {
+            Schema::create('joueurs', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('equipe_id');
+                $table->foreign('equipe_id')
+                    ->references('id')
+                    ->on('equipes')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
+                $table->text('nom');
+                $table->text('prenom');
+                $table->integer('age');
+                $table->integer('numero');
+                $table->text('photo');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

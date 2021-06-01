@@ -3,7 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use EquipeSeeder;
+use Database\Seeders\EquipeSeeder;
+use Database\Seeders\JoueurSeeder;
+use Database\Seeders\PaysSeeder;
+use Database\Seeders\ChampionnatSeeder;
+use Database\Seeders\RencontreSeeder;
 
 class DatabaseSeeder extends Seeder
 {
