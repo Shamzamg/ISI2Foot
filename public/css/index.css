@@ -152,6 +152,22 @@ a{
     pointer-events: initial;
 }
 
+.btn-small {
+    border-radius: 10px;
+    padding: 3px 7px;
+    border: 2px solid #012329;
+    text-decoration: none;
+    color: #012329;
+    font-size: .2em;
+    text-transform: uppercase;
+    display: block;
+    margin: 10px auto 0;
+    max-width: 30px;
+    width: 100%;
+    font-weight: bold;
+    pointer-events: initial;
+}
+
 .btn:hover{
 
     border-radius: 30px;

@@ -19,13 +19,13 @@
                     @auth
                     <div class="row">
                         <div class="col-lg-4">
-                            <a href="{{ route('joueurs.show', $joueur->id) }}" class="btn-primary btn-sm">Voir</a>
+                            <a href="{{ route('joueurs.show', $joueur->id) }}" class="btn-small btn-primary">Voir</a>
                         </div>
                         <div class="col-lg-4">
-                            <a href="{{ route('joueurs.edit', $joueur->id) }}" class="btn-info btn-sm">Modifier</a>
+                            <a href="{{ route('joueurs.edit', $joueur->id) }}" class="btn-small btn-info">Modifier</a>
                         </div>
                         <div class="col-lg-4">
-                            <a href="{{ route('joueurs.destroy', $joueur->id) }}" method="post" class="btn-warning btn-sm" type="submit">Supprimer</button>
+                            <a href="{{ route('joueurs.destroy', $joueur->id) }}" method="post" class="btn-small btn-warning" type="submit">Supprimer</button>
                         </div>
                     </div>
                     @else
