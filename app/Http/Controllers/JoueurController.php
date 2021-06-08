@@ -62,7 +62,7 @@ class JoueurController extends Controller
      */
     public function edit(Joueur $joueur)
     {
-        //
+        return view('edit', compact('joueur'));
     }
 
     /**
@@ -74,7 +74,8 @@ class JoueurController extends Controller
      */
     public function update(Request $request, Joueur $joueur)
     {
-        //
+        $joueur->update($request->all());
+        return back()->with('info','Le joueur a bien été modifié dans la base de données');
     }
 
     /**
@@ -85,6 +86,7 @@ class JoueurController extends Controller
      */
     public function destroy(Joueur $joueur)
     {
-        //
+        $joueur->delete();
+        return back()->with('info','Le joueur a bien été supprimé de la base de données');
     }
 }
