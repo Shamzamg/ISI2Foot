@@ -5,6 +5,7 @@ use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\RencontreController;
 use App\Http\Controllers\ChampionnatController;
+use App\Http\Controllers\AjoutController;
 
 /*
 |--------------------------------------------------------------------------
