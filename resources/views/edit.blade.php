@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('titrePage', 'Modification d'un joueur')
+@section('titrePage', 'Modification du joueur')
 
 @section('contenu')
 @if(session()->has('info'))
