@@ -11,11 +11,11 @@
 </div>
 @endif
 <br>
-<div class="container" style="height: 100vh;">
-    <div class="row card text-white bg-dark">
+<div class="container">
+    <div class="row card text-white bg-dark" style="padding-top: 50px;">
         @auth
         <h4 class="card-header">Modifier un joueur</h4>
-        <div class="card-body">
+        <div class="card-body" style="height: 100vh;">
             <form action="{{ route('joueurs.update',$joueur->id)}}" method="POST">
                 @csrf
                 @method('put')

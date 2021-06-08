@@ -136,6 +136,11 @@ a{
     opacity: 1;
 }
 
+form{
+    width: 100px;
+    margin-top: 30px;
+}
+
 .btn {
     border-radius: 30px;
     padding: 10px 20px;
