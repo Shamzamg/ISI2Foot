@@ -28,10 +28,10 @@
                     <form action="{{ route('joueurs.destroy', $joueur->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <div class="col-lg-2 col-sm-2">
+                        <div class="col-lg-3 col-sm-3">
                             <button class="btn btn-danger btn-delete" type="submit">Supprimer</button>
                         </div>
-                        <div class="col-lg-10 col-sm-10"></div>
+                        <div class="col-lg-9 col-sm-9"></div>
                     </form>
                 </div>
             </div>  
