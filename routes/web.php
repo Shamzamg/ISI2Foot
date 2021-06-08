@@ -31,3 +31,7 @@ Route::resource('equipes', EquipeController::class);
 Route::resource('rencontres', RencontreController::class);
 
 Route::resource('championnats', ChampionnatController::class);
+
+Route::resource('ajout', AjoutController::class);
+
+require __DIR__.'/auth.php';

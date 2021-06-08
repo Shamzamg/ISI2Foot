@@ -25,7 +25,7 @@ class JoueurController extends Controller
      */
     public function create()
     {
-        //
+        return view('ajout');
     }
 
     /**
@@ -34,9 +34,10 @@ class JoueurController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(InsertJoueurRequest $request)
     {
-        //
+        Joueur::create($request->all());
+        return view('confirm');
     }
 
     /**
