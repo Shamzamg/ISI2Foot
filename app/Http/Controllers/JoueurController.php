@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Joueur;
 use Illuminate\Http\Request;
+use App\Http\Requests\InsertJoueurRequest;
 
 class JoueurController extends Controller
 {

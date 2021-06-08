@@ -5,7 +5,7 @@
     <div class="row card text-white bg-dark">
         @auth
         <h4 class="card-header">Ajouter un joueur</h4>
-        <div class="card-body">
+        <div class="card-body" style="height: 100vh;">
             <form action="{{ route('joueurs.store')}}" method="POST">
                 @csrf
                 <br>
@@ -58,7 +58,7 @@
         </div>
         @else
         <h4 class="card-header">Accès interdit</h4>
-        <div class="card-body">
+        <div class="card-body" style="height: 100vh;">
             Vous n'avez pas les autorisations requises pour accéder à cette page.
         </div>
         @endauth
