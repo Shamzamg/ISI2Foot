@@ -11,6 +11,8 @@ class Joueur extends Model
 
     public $timestamps = false;
 
+    protected $guarded = ['id']; 
+
     public function equipe(){
         return $this->belongsTo(Equipe::class);
     }
