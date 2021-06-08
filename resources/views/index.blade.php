@@ -17,6 +17,7 @@
                 <img src="{{ asset('images/joueurs/'.$joueur->photo) }}" />
                 <div class="desc">
                     @auth
+                    <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
                             <a href="{{ route('joueurs.show', $joueur->id) }}" class="btn">Voir</a>
@@ -24,9 +25,9 @@
                         <div class="col-lg-4">
                             <a href="{{ route('joueurs.edit', $joueur->id) }}" class="btn">Modifier</a>
                         </div>
-                        <div class="col-lg-4">
                             <a href="{{ route('joueurs.destroy', $joueur->id) }}" method="post" class="btn" type="submit">Supprimer</button>
                         </div>
+                    </div>
                     </div>
                     @else
                     <a href="{{ route('joueurs.show', $joueur->id) }}" class="btn">Voir</a>
