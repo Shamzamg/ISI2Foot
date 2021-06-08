@@ -87,6 +87,7 @@ class JoueurController extends Controller
     public function destroy(Joueur $joueur)
     {
         $joueur->delete();
-        return back()->with('info','Le joueur a bien été supprimé de la base de données');
+        $joueurs = Joueur::all();
+        return view('index',compact('joueurs'));
     }
 }

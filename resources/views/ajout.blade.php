@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('contenu')
 
-<div class="container">
+<div class="container" style="margin-top: 50px;">
     <div class="row card text-white bg-dark">
         @auth
         <h4 class="card-header">Ajouter un joueur</h4>
