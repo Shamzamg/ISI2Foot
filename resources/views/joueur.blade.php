@@ -28,9 +28,10 @@
                     <form action="{{ route('joueurs.destroy', $joueur->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <div class="col-lg-12 col-sm-12">
-                            <button class="btn btn-danger" type="submit">Supprimer</button>
+                        <div class="col-lg-2 col-sm-2">
+                            <button class="btn btn-danger btn-delete" type="submit">Supprimer</button>
                         </div>
+                        <div class="col-lg-10 col-sm-10"></div>
                     </form>
                 </div>
             </div>  
