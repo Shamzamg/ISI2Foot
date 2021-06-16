@@ -1,8 +1,10 @@
 # ISI2Foot
 
-Projet d'ISI2 en PHP avec le framework Laravel. 
+Projet d'ISI2 en PHP avec le framework Laravel. Le projet est accessible à l'adresse https://isi2foot.herokuapp.com
 
 ## Usage
+
+### En local 
 
 Installer la base de données fournies dans database/dbfile au nom de "isi2foot.sql" 
 
@@ -29,3 +31,7 @@ Une fois le tout bien set-up, le site se lance par le moyen de la commande suiva
 ```
 php artisan serve
 ```
+
+### En ligne
+
+Re-configurez le .env selon votre configuration, déployer ensuite.
